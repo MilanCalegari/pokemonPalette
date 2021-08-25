@@ -1,0 +1,1 @@
+from .poke_palette import *
