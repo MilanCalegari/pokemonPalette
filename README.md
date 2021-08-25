@@ -1,5 +1,13 @@
 # pokePalette
-The pokePalette is a python library generate a color palette based on the colors of a chosen pokemon. 
+The pokePalette is a python library generate a color palette based on the colors of a chosen pokemon.  
+
+![license](https://img.shields.io/github/license/MilanCalegari/pokePalette) ![stars](https://img.shields.io/github/stars/MilanCalegari/pokePalette?style=social)
+____
+## Requeriments:  
+numpy  
+opencv  
+pokebase   
+sklearn
 ____
 ## Usage:
 
