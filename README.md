@@ -61,7 +61,7 @@ ____
 >axes[0].set_title("squirtle")
 >```
 > <p align="center">
->    <img  width="275" height="250" src="https://user-images.githubusercontent.com/52531634/131044194-7759bf42-e4cb-4d46-b6b0-18d60390bc97.png" />
+>    <img  width="275" height="250" src="https://user-images.githubusercontent.com/52531634/131044341-5c12c598-2995-4091-bd05-5dc51ef615b4.png" />
 > </p>  
   
 ____
