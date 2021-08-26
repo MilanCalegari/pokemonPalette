@@ -1,4 +1,4 @@
-# pokemonPalette ![license](https://img.shields.io/github/license/MilanCalegari/pokePalette) ![version](https://img.shields.io/pypi/v/pokemonPalette) ![stars](https://img.shields.io/github/stars/MilanCalegari/pokePalette?style=social) ![Twittwer](https://img.shields.io/twitter/follow/rmcalegari?style=social)
+# pokemonPalette ![license](https://img.shields.io/github/license/MilanCalegari/pokePalette) ![version](https://img.shields.io/pypi/v/pokemonPalette?color=green) ![stars](https://img.shields.io/github/stars/MilanCalegari/pokePalette?style=social) ![Twittwer](https://img.shields.io/twitter/follow/rmcalegari?style=social)
 The pokePalette is a python library generate a color palette based on the colors of a chosen pokemon.  
 
 
