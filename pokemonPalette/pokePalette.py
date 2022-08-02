@@ -17,7 +17,7 @@ def get_pokemon(Pokemon):
 
 def get_pokemon_image(pokemon_id, shiny):
    #''Returns a numpy array with the pokemon '''
-    url = pb.SpriteResource('pokemon', pokemon_id).url
+    url = pb.SpriteResource('pokemon', pokemon_id, shiny = shiny).url
     req = urllib.request.urlopen(url)
     arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
     img = cv2.imdecode(arr, -1)
