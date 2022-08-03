@@ -29,7 +29,7 @@ def get_color(image, numcolors):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     img = img.reshape((img.shape[0] * img.shape[1],3))
 
-    clt = KMeans(n_clusters=numcolors+1) #+ 1 because one color is black
+    clt = KMeans(n_clusters=numcolors+1,random_state=42) #+ 1 because one color is black
     clt.fit(img)
 
     #convert the array to rgb
