@@ -15,9 +15,9 @@ def get_pokemon(Pokemon):
     else:
         raise TypeError("Must be Pokedex ID or Pokemon name")
 
-def get_pokemon_image(pokemon_id, shiny):
+def get_pokemon_image(pokemon_id, shiny, back):
    #''Returns a numpy array with the pokemon '''
-    url = pb.SpriteResource('pokemon', pokemon_id).url
+    url = pb.SpriteResource('pokemon', pokemon_id, shiny = shiny, back = back).url
     req = urllib.request.urlopen(url)
     arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
     img = cv2.imdecode(arr, -1)
@@ -29,7 +29,7 @@ def get_color(image, numcolors):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     img = img.reshape((img.shape[0] * img.shape[1],3))
 
-    clt = KMeans(n_clusters=numcolors+1) #+ 1 because one color is black
+    clt = KMeans(n_clusters=numcolors+1,random_state=42) #+ 1 because one color is black
     clt.fit(img)
 
     #convert the array to rgb
@@ -48,7 +48,7 @@ def rgb2hex(colors):
     '''return a list of hex colors'''
     return ["#"+'%02x%02X%02X'%color for color in colors]
 
-def get_pokemon_palette(Pokemon, numcolors=4, shiny=False):
+def get_pokemon_palette(Pokemon, numcolors=4, shiny=False, back=False):
     poke_id = get_pokemon(Pokemon)
-    colors = get_color(get_pokemon_image(poke_id, shiny), numcolors)
+    colors = get_color(get_pokemon_image(poke_id, shiny, back), numcolors)
     return rgb2hex(colors)
